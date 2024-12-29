@@ -25,7 +25,7 @@ def calculate_savings(saving_per_slot):
             Y.append(i)
             C.append('green' if savings > 0 else 'red')
             savings_values.append(savings)
-
+            
 calculate_savings(10800)
 
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -35,8 +35,8 @@ plt.subplots_adjust(bottom=0.25)
 plt.title("How much IC do you save by maxxing out inf on tiles with different building slots?")
 plt.suptitle("Green indicates positive savings; Red indicates negative savings", fontsize=10, color="gray")
 plt.xlabel("Slots Left")
-plt.ylabel("Infrastructure To Be Buillt")
-plt.yticks(ticks=infraLevel, labels=[str(i) for i in reversed(infraLevel)])
+plt.ylabel("Infrastructure Originally")
+plt.yticks(ticks=infraLevel, labels=[str(i) for i in (infraLevel)])
 plt.grid(alpha=0.3)
 
 annot = ax.annotate("", xy=(0, 0), xytext=(10, 10), textcoords="offset points",
