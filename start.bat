@@ -1,0 +1,2 @@
+py infcalc.py
+pause
